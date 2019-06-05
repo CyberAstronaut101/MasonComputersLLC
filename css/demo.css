@@ -1,0 +1,127 @@
+
+body {
+    /*
+        Good to note, that with relative paths it is relative to this current file
+        which is why I had to cd up a directory with ../images to get the backgroudn 
+    */
+    background-image: url("../images/green_paper.png");
+    font-family: 'Overpass Mono', monospace;
+}
+#top {
+    max-width: 1440px;
+}
+.demo .row .col {
+    background-color: #eee;
+}
+.demo .row .col:nth-child(even) {
+    background-color: #ddd;
+}
+.docs {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.summary a {
+    color: #41403e;
+}
+img.no-responsive {
+    max-width: -webkit-fill-available;
+    max-width: -moz-available;
+}
+.to-top {
+    opacity: 1;
+    display: inline-block;
+    padding: 1em;
+    position: fixed;
+    bottom: 1em;
+    right: 1em
+}
+.to-top .paper-btn {
+    padding: .6em 1em;
+    background: #fff;
+    border-top-left-radius: 185px 160px;
+    border-top-right-radius: 200px 195px;
+    border-bottom-right-radius: 160px 195px;
+    border-bottom-left-radius: 185px 190px
+}
+.demo-title:hover + .to-top {
+    opacity: 0
+}
+.sidebar-title a {
+  color: inherit;
+  background: none;
+}
+.collapsible.full-width {
+  width: 100%;
+}
+
+/*
+
+    For Amazon EC2  Section
+*/
+section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ----------------------
+  Section about-me
+------------------------*/
+.about-me {
+  background-color: black;
+  padding: 25px;
+  border: 2px solid lime;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.about-me * {
+  background-color: black;
+  color: lime;
+  font-family: Courier New;
+  box-sizing: border-box;
+}
+
+.output {
+  color: white;
+}
+.active:after {
+  content: '_';
+}
+
+.hideme {
+  display: none;
+}
+
+.about-me__content {
+  font-size: 16px;
+}
+
+
+
+
+
+.fa-facebook {
+  color: #3b5998
+}
+
+.fa-stack-overflow {
+  color: #FF5722;
+}
+
+.fa-github-alt {
+  color: black;
+}
+
+.fa-linkedin {
+  color: #007bb6;
+}
