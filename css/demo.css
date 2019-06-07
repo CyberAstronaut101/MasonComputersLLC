@@ -59,7 +59,7 @@ img.no-responsive {
     For Amazon EC2  Section
 */
 section {
-  height: 100vh;
+  height: 150vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,7 +69,8 @@ section {
   -webkit-transition: .5s ease;
   transition: .5s ease;
   box-sizing: border-box;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow: auto;
 }
 
 /* ----------------------
@@ -106,10 +107,9 @@ section {
   font-size: 16px;
 }
 
-
-
-
-
+/*
+  For adding color to the FontAwesome Icons
+*/
 .fa-facebook {
   color: #3b5998
 }
