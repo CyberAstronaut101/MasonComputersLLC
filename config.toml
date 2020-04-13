@@ -1,4 +1,4 @@
-baseURL = "http://masoncomputers.com/"
+baseURL = "https://ejmason101.github.io"
 languageCode = "en-us"
 title = "MASON COMPUTERS"
 
@@ -44,11 +44,11 @@ paginate = 5
     languageName = "English"
     title = "Mason Computers"
     subtitle = "All Things Tech"
-    owner = ""
-    keywords = ""
+    owner = "Elliot Mason"
+    keywords = "Personal Developer Blog"
     copyright = ""
-    menuMore = "Show more"
-    readMore = "Read more"
+    menuMore = "More"
+    readMore = "Need More?"
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
@@ -57,13 +57,20 @@ paginate = 5
 
     [languages.en.menu]
       [[languages.en.menu.main]]
+        weight = 1
         identifier = "about"
         name = "About Me"
         url = "/about-me"
       [[languages.en.menu.main]]
         identifier = "posts"
+        weight = 2
         name = "Posts"
         url = "/posts"
+      [[languages.en.menu.main]]
+        identifier = "tags"
+        weight = 3
+        name = "Categories"
+        url = "/tags"
       [[languages.en.menu.main]]
         identifier = "github"
         name = "GitHub"
