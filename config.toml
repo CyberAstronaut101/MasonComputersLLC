@@ -1,0 +1,78 @@
+baseURL = "http://masoncomputers.com/"
+languageCode = "en-us"
+title = "MASON COMPUTERS"
+
+baseurl = "/"
+theme = "terminal"
+paginate = 5
+
+[params]
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+
+  # ["orange", "blue", "red", "green", "pink"]
+  themeColor = "green"
+
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 3
+
+  # show selector to switch language
+  showLanguageSelector = false
+
+  # set theme to full screen width
+  fullWidthTheme = false
+
+  # center theme with default width
+  centerTheme = true
+
+  # set a custom favicon (default is a `themeColor` square)
+  favicon = "favicon.ico"
+
+  # set all headings to their default size (depending on browser settings)
+  # it's set to `true` by default
+  # oneHeadingSize = false
+
+[params.twitter]
+  # set Twitter handles for Twitter cards
+  # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
+  # do not include @
+  creator = "Code_Master113"
+  site = "https://twitter.com/Code_Master113"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "Mason Computers"
+    subtitle = "All Things Tech"
+    owner = ""
+    keywords = ""
+    copyright = ""
+    menuMore = "Show more"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+
+    [languages.en.params.logo]
+      logoText = "MASON COMPUTERS"
+      logoHomeLink = "/about-me"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About Me"
+        url = "/about-me"
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts"
+      [[languages.en.menu.main]]
+        identifier = "github"
+        name = "GitHub"
+        url = "https://github.com/ejmason101"
+      [[languages.en.menu.main]]
+        identifier = "linkedin"
+        name = "LinkedIn"
+        url = "https://www.linkedin.com/in/emason101/"
+      [[languages.en.menu.main]]
+        identifier = "stackoverflow"
+        name = "Stack Overflow"
+        url = "https://stackoverflow.com/users/4443812/elliot?tab=profile"
