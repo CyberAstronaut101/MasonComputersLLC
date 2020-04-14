@@ -14,7 +14,7 @@ paginate = 5
   themeColor = "green"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 3
+  showMenuItems = 2
 
   # show selector to switch language
   showLanguageSelector = false
@@ -48,7 +48,7 @@ paginate = 5
     keywords = "Personal Developer Blog"
     copyright = ""
     menuMore = "More"
-    readMore = "Need More?"
+    readMore = "Continue Reading"
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
