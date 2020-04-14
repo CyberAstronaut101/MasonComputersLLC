@@ -1,0 +1,178 @@
+
+{{ define "main" }}
+
+<style>
+	/*
+    	For Amazon EC2  Section
+	*/
+	section {
+		height: 150vh;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-transition: .5s ease;
+		transition: .5s ease;
+		box-sizing: border-box;
+		/* overflow: hidden; */
+		overflow: auto;
+	}
+</style>
+
+<main aria-role="main" style="width: 100%">
+
+    <div class="homepage-title" style="width: 100%; text-align: center;">
+        <h1 style="text-align: center">{{.Title}}</h1>
+        {{ with .Params.subtitle }}
+        <span class="subtitle">{{.}}</span>
+        {{ end }}
+    </div>
+
+	<section>
+		<div class="about-me">
+			<!-- <div class="text-center">
+	<img class="unselectable" src="img/about-me.png" height="100" width="550">
+	<br><br>
+</div> -->
+			<div class="clearfix"></div>
+			<div class="about-me__content" id="terminal-start">
+				<!-- <p>Last login: Thu Oct 12 00:28:38 2017</p> -->
+				<pre style="border: none;">
+███████╗ ██████╗██████╗ 
+██╔════╝██╔════╝╚════██╗
+█████╗  ██║      █████╔╝
+██╔══╝  ██║     ██╔═══╝ 
+███████╗╚██████╗███████╗
+╚══════╝ ╚═════╝╚══════╝
+</pre>
+				<div class="command">
+
+					<p>cat hobbies.txt</p>
+					<span class="hideme">
+						&ensp;|- CAD <br>
+						&emsp;&emsp;\- Fusion 360 <br>
+						&ensp;|- 3D Printing <br>
+						&emsp;&emsp;\- Printers<br>
+						&emsp;&emsp;&emsp;|- WanHao Di3<br>
+						&emsp;&emsp;&emsp;|- Pursa MK3s<br>
+						&emsp;&emsp;&emsp;|- Pursa MMU v2.0<br>
+						&emsp;&emsp;\- Slicers<br>
+						&emsp;&emsp;&emsp;|- Slic3r<br>
+						&emsp;&emsp;&emsp;|- Simplify3D <br>
+						&emsp;&emsp;&emsp;|- Cura <br>
+						&ensp;|- Full Stack Development<br>
+						&emsp;&emsp;\- MEAN <br>
+						&emsp;&emsp;&emsp;|- MongoDB <br>
+						&emsp;&emsp;&emsp;|- Express.js <br>
+						&emsp;&emsp;&emsp;|- Angular <br>
+						&emsp;&emsp;&emsp;|- Node.js <br>
+						&ensp;|- Programming <br>
+						&emsp;&emsp;|- Python3 <br>
+						&emsp;&emsp;|- HTML/CSS <br>
+						&emsp;&emsp;|- Javascript <br>
+						&emsp;&emsp;|- Typescript <br>
+						&emsp;|- Editors <br>
+						&emsp;&emsp;|- VIM <br>
+						&emsp;&emsp;|- Visual Studio Code<br>
+						&emsp;&emsp;|- Sublime Text 3<br>
+					</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+  <div class="homepage-content">
+    <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+    {{.Content}}
+  </div>
+  <div>
+    {{ range first 10 .Site.RegularPages }}
+        {{ .Render "summary"}}
+    {{ end }}
+  </div>
+</main>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		//$ = jQuery;
+		var $self;
+		$('input[type=radio]').on('click', function () {
+			$self = $(this);
+			if ($self.hasClass('is-checked')) {
+				$self.prop('checked', false).removeClass('is-checked');
+			} else {
+				$self.addClass('is-checked');
+			}
+		});
+
+		/*-------------------------------
+					terminal linux style
+				-------------------------------*/
+		var about_me_content_displayed = false;
+		var $lines = $('.command p');
+		$lines.hide();
+
+		var lineContents = [];
+		var output = [];
+
+		var terminal = function () {
+			var skip = 0;
+			typeLine = function (idx) {
+				idx == null && (idx = 0);
+				var element = $lines.eq(idx);
+				var content = lineContents[idx];
+				if (typeof content == "undefined") {
+					$('.skip').hide();
+					return;
+				}
+				var charIdx = 0;
+				var typeChar = function () {
+					var rand = Math.round(Math.random() * 150) + 20;
+
+					setTimeout(function () {
+						var char = content[charIdx++];
+						element.append(char);
+						if (typeof char !== "undefined")
+							typeChar();
+						else {
+							element.append('<br/><span class="output">' + output[idx] + '</span>');
+							element.removeClass('active');
+							typeLine(++idx);
+						}
+					}, skip ? 0 : rand);
+				}
+				element.append('[ec2-user@ip-127-0-0-1 ~]$ ').addClass('active');
+				typeChar();
+			}
+
+			$lines.each(function (i) {
+				lineContents[i] = $(this).text();
+				output[i] = $(this).next('span').html();
+				$(this).text('').show();
+			});
+			typeLine();
+		}
+
+		$(window).scroll(function () {
+			var hT = $('#terminal-start').offset().top,
+				hH = $('#terminal-start').outerHeight(),
+				wH = $(window).height(),
+				wS = $(this).scrollTop() - 250;
+			if (wS > (hT + hH - wH) && !about_me_content_displayed) {
+				about_me_content_displayed = true;
+				terminal();
+			}
+		});// end terminal style -------
+
+
+
+
+		console.log("We Do Not Inherit the Earth from Our Ancestors; We Borrow It from Our Children");
+	</script>
+{{ end }}

@@ -12,33 +12,31 @@ showFullContent: false
 
 This article details the steps needed to add a custom domain name to a github pages website.
 
-Github Pages is a static hosting service that is able to host HTML, CSS, and JavaScript from a repository on GitHub.
+Github Pages is a static hosting service that is able to host HTML, CSS, and JavaScript from a git repository on GitHub. 
 
+You do not need to have a custom domain if you want to use the GitHub Pages service, your personal site `https://ejmason101.github.io` will still resolve. This write up is intended to be used as a guide to add any domain to point to the your static site on GitHub Pages
+
+[GitHub Pages Documentation](https://pages.github.com/)
 
 ## Quick Jump
 ---
-> - [Domain](#domain-name)
-> - [Github Pages](#github-pages)
-> - [DNS Settings](#dns-settings)
+> - [Domain](#domain-registration)
+> - [Github Repo Setup](#github-repo-setup)
+> - [Domain DNS Settings](#domain-dns-settings)
 > - [Enable HTTPS](#enable-HTTPS)
 
 
-
-### Domain
+### Domain Registration
 ---
 
-Google Domains
+In order to add a custom domain to your GitHub Pages site, you must first own a domain. I recommend {{< tab-link link="https://domains.google.com/m/registrar/" desc="Google Domains" >}} - The management user interface is sleek and fast and the domains are cheap (most top level domains (TLD) going for $12/year).
 
-Picture of the DNS settings page
+Once you have purchased a domain, you are now able to manage the [DNS Settings](#dns-settings).
 
-### Github Pages
+
+### Github Repo Setup
 ---
 
-Links for how to get started
-
-Once you have it, show that ejmason101.github.io will serve
-
-Show setting pictures
 
 1. Create Repo that has the name `<UserName>.github.io` on github, add your static website files to it.
 
@@ -49,7 +47,7 @@ masoncomputers.com
 www.masoncomputers.com
 ```
 
-3. Push to github
+3. Push to GitHub
 
 ```shell
 git add -A 
@@ -61,12 +59,22 @@ git push origin master
 
 Within the new project you created, navigate to `Settings -> Options -> GitHub Pages` and add your domain name to the `Custom Domain` box
 
-![Github Settings](/assets/img/posts/github_pages/github_settings.png)
 
-HTTPS is not enabled yet, but after the DNS settings are updated we will revisit this panel.
+{{< figure src="/assets/img/posts/github_pages/github_settings.png" >}}
 
 
-# DNS Settings
+> Note: HTTPS is not enabled yet, but you can [enable HTTPS](#enabling-https)
+
+
+
+
+
+
+
+
+
+
+# Domain DNS Settings
 
 ---
 
@@ -74,7 +82,7 @@ You will need to update your DNS settings for your domain name, which require yo
 
 Navigate to your `DNS` settings on the left nav bar to add the required resource records. 
 
-![Google Domain Nav](/assets/img/posts/github_pages/domains_dns_settings.png)
+{{< figure src="/assets/img/posts/github_pages/domains_dns_settings.png">}}
 
 
 And then navigate to the `Custom Resource Records` table. 
@@ -84,17 +92,16 @@ And then navigate to the `Custom Resource Records` table.
 
 An `A Record` maps a domain name to the IP address of the server hosting the website, In this case, GitHub Pages. This is `NOT four A Records`, instead add one A record and `add all IPs under that one A Record`.
 
-![domains a record](/assets/img/posts/github_pages/domains_a_record.png)
+{{< figure src="/assets/img/posts/github_pages/domains_a_record.png">}}
 
 > Note: The IP's shows in this picture may be outdated. To get the current IP's check [Github Pages Documentation](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site/?target=_blank).
-
 
 
 ## Adding CNAME Record
 
 Then add a `CNAME` record, replacing the address (`ejmason101.github.io`) with the one you are working with.
 
-![domains cname setting](/assets/img/posts/github_pages/domains_cname_setting.png)
+{{< figure src="/assets/img/posts/github_pages/domains_cname_setting.png" >}}
 
 > Note: It may take up to 48 hours for these changes in DNS to be reflected.
 
@@ -122,7 +129,7 @@ Once you have prepped the project with the `CNAME` file, updated the DNS setting
 
 Revisit `Settings -> Options -> GitHub Pages` and remove your domain from the `Custom Domain` input. Save. Then check `Enforce HTTPS`, re-enter your domain and save. 
 
-![GitHub HTTPS](/assets/img/posts/github_pages/github_settings_https.png)
+{{< figure src="/assets/img/posts/github_pages/github_settings_https.png">}}
 
 Once this resolves, remove the custom domain, save, then re-enable HTTPS and add the custom domain name again
 

@@ -2,7 +2,7 @@ baseURL = "https://masoncomputers.com"
 languageCode = "en-us"
 title = "MASON COMPUTERS"
 
-baseurl = "/"
+baseurl = "/home"
 theme = "terminal"
 paginate = 5
 
@@ -53,7 +53,7 @@ paginate = 5
 
     [languages.en.params.logo]
       logoText = "MASON COMPUTERS"
-      logoHomeLink = "/about-me"
+      logoHomeLink = "/"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
