@@ -2,7 +2,7 @@
 title: "About Me - All Things Tech"
 date: "2020-04-14"
 author: "Elliot Mason"
-tags: [ "MyRig", "MyDesk", "MasonComputers", "AboutMe"]
+tags: [ "rig", "Mason_Computers"]
 ---
 
 MASON COMPUTERS spawned in 2014 when I began my journey into computer programming. Now that I am about to graduate with my B.S. in Computer Science with a focus in Cyber Security, the time has come to give this site a purpose. 

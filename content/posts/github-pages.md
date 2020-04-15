@@ -4,7 +4,7 @@ date: "2020-04-14"
 author: "Elliot"
 authorTwitter: "codemaster113" #do not include @
 cover: "/assets/img/posts/github_pages/github_domain_post.png"
-tags: ["GitHub", "GitHubPages", "GoogleDomains", "WebDevelopment", "StaticWebsite"]
+tags: ["GitHub", "github_pages", "Google_Domains", "web_dev", "static_website"]
 keywords: ["how do I add custom domain name to github pages", "github pages domain name", "custom domain name", "static blog website"]
 description: "Step by Step tutorial on how to add a custom domain name to a GitHub Pages site"
 showFullContent: false
