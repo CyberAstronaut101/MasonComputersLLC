@@ -14,7 +14,7 @@ paginate = 5
   themeColor = "green"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 3
 
   # show selector to switch language
   showLanguageSelector = false
@@ -46,7 +46,7 @@ paginate = 5
     subtitle = "All Things Tech"
     owner = "Elliot Mason"
     keywords = "Personal Developer Blog"
-    copyright = ""
+    copyright = "MASON COMPUTERS"
     menuMore = "More"
     readMore = "Continue Reading"
     readOtherPosts = "Read other posts"
@@ -67,19 +67,13 @@ paginate = 5
         name = "Posts"
         url = "/posts"
       [[languages.en.menu.main]]
-        identifier = "tags"
+        identifier = "categories"
         weight = 3
         name = "Categories"
         url = "/tags"
       [[languages.en.menu.main]]
-        identifier = "github"
-        name = "GitHub"
-        url = "https://github.com/ejmason101"
-      [[languages.en.menu.main]]
-        identifier = "linkedin"
-        name = "LinkedIn"
-        url = "https://www.linkedin.com/in/emason101/"
-      [[languages.en.menu.main]]
-        identifier = "stackoverflow"
-        name = "Stack Overflow"
-        url = "https://stackoverflow.com/users/4443812/elliot?tab=profile"
+        identifier = "ham-radio"
+        weight = 4
+        name = "HAM Radio"
+        url = "/tags"
+
