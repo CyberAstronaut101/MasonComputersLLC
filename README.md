@@ -21,7 +21,7 @@ See (quickstart)[https://gohugo.io/getting-started/quick-start/] for a quick gui
 5. Add the newly created repo as a submodule:
 
 ```
-git submodule add https://github.com/ejmason101/ejmason101.github.io /public`
+git submodule add https://github.com/ejmason101/ejmason101.github.io ./public`
 ```
 
 6. Create a deploy script, `deploy.sh`, which will build the static files in this repo, push them to the newly added submodule, thus updating your github pages website. 
