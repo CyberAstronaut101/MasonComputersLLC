@@ -71,9 +71,4 @@ paginate = 5
         weight = 3
         name = "Topics"
         url = "/tags"
-      [[languages.en.menu.main]]
-        identifier = "ham-radio"
-        weight = 4
-        name = "HAM Radio"
-        url = "/tags"
 

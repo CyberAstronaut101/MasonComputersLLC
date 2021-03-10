@@ -36,6 +36,9 @@ Already Cloned: `git submodule update --init`
 
 Cloned with nested submodules: `git submodule update --init --recursive`
 
+## Development Workflow
+
+Start the local Hugo development server with `hugo server -D`
 
 ## Hugo Theme
 

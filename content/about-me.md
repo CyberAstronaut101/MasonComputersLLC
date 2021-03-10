@@ -14,19 +14,19 @@ During my extended time at home due to COVID-19, I have found myself picking up 
 
 # My Rig
 
-- CPU: FX-8350 8-core @ 4.0GHz with Corsair H60
-- Memory: 16GB DDR3
-- GPU: R9 290X ([Thank You](https://twitter.com/That1FionaGirl)  @That1FionaGirl, rip my OG GTX 750-ti)
-- SSD: 2x Crucial 256GB, SanDisk 1TB
+- CPU: Ryzen 7 3800X @ 4.2GHz with Arctic Liquid Freezer 240
+- Memory: 64GB DDR4 3600MHz
+- GPU: GTX 3060
+- SSD: SanDisk 1TB
 - Main Storage: Seagate BarraCuda 2TB 7200 RPM
-- OS: Ubuntu, Windows 10
-- Corsair 650W PSU
-- Mouse: Logitech Performance MX
-- Keyboard: Corsair K95 RGB Cherry MX Brown
+- OS: Windows 10, Ubuntu on WSL2
+- Corsair 750W PSU
+- Mouse: Logitech G502 Hero
+- Keyboard: Anne Pro 2 60%
 - Headphones: Razer Nari Essential
-- Microphone: SH-666
+- Microphone: Blue Yeti
 
-# Desk Setup
+<!-- # Desk Setup
 - Main Monitor: 32" QHD HP Pavilion
 - Left Monitor: 24" AOC i2269vw [(Free Geek Find)](https://www.freegeekarkansas.org/)
 - Right Monitor: 19.5" Dell [(Free Geek Find)](https://www.freegeekarkansas.org/)
@@ -34,7 +34,7 @@ During my extended time at home due to COVID-19, I have found myself picking up 
 - Chair: [Massdrop Flex Task Chair](https://drop.com/?referer=G9SJGS)
 - Radio: BaoFeng UV-5R 2m/70cm Handheld
 
-{{< figure src="/assets/img/about-me/my_rig_setup.jpg" >}}
+{{< figure src="/assets/img/about-me/my_rig_setup.jpg" >}} -->
 
 # Hobbies
 
