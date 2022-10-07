@@ -1,21 +1,8 @@
 ---
-title: "MASON COMPUTERS Homepage"
-subtitle: "All Things Tech"
-date: "2012-07-18"
-author: "Elliot Mason"
-tags: [""]
+title: "home"
 ---
-<!-- 
-# Welcome to my personal website
 
-This site will host my personal notes, tutorials, and project logs.  -->
+MASON COMPUTERS spawned in 2014 when I started my first HTML/JS class.
+Since then INow that I am about to graduate with my B.S. in Computer Science with a focus in Cyber Security, the time has come to give this site a purpose.
 
-{{< social_links >}}
-
-
-This site will host my personal notes, tutorials, and project logs. 
-
-- [Posts by Date](/posts)
-- [Posts by Category](/tags)
-- [About Me](/about-me/)
-  
+Interested in All Things Tech. If something has electricity flowing, there is a good chance that I have experience tinkering with it.  

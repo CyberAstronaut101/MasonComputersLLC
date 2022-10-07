@@ -1,7 +1,4 @@
-[submodule "themes/terminal"]
-	path = themes/terminal
-	url = https://github.com/ejmason101/hugo-theme-terminal.git
-[submodule "public"]
-	path = public
-	url = https://github.com/ejmason101/ejmason101.github.io.git
-	branch = master
+[submodule "themes/congo"]
+	path = themes/congo
+	url = https://github.com/jpanther/congo.git
+	branch = stable
