@@ -1,27 +1,26 @@
-languageCode = "en"
-languageName = "English"
+# Hugo 0.158+: locale/label replace languageCode/languageName
+locale = "en"
+label = "English"
 displayName = "EN"
 isoCode = "en"
 weight = 1
-rtl = false
+direction = "ltr"
 
 title = "Mason Computers"
 # logo = "images//logo.jpg"
-description = "My awesome website"
 copyright = "Copy, _right?_ :thinking_face:"
 
-dateFormat = "2 January 2006"
+[params]
+  dateFormat = "2 January 2006"
+  description = "My awesome website"
 
-[author]
+# Congo 2.x: author lives under params.author (not top-level [author])
+[params.author]
   name = "Elliot Mason"
   image = "images/author.png"
   headline = "Fullstack | Maker | CypherPunk"
   bio = ""
   links = [
-  #   { dev = "https://dev.to/username" },
-  { github = "https://github.com/CyberAstronaut101" },
-  #   { hashnode = "https://username.hashnode.dev" },
-  { linkedin = "https://www.linkedin.com/in/emason101/" },
-  #   { medium = "https://medium.com/username" },
-  #   { twitter = "https://twitter.com/username" },
+    { github = "https://github.com/CyberAstronaut101" },
+    { linkedin = "https://www.linkedin.com/in/emason101/" },
   ]

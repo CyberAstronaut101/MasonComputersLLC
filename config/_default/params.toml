@@ -12,7 +12,8 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = true
 
-# mainSections = ["section1", "section2"]
+# Sections that appear in homepage Recent (and similar lists)
+mainSections = ["blog", "projects"]
 # robots = ""
 
 [header]

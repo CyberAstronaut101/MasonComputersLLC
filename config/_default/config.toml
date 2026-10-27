@@ -4,9 +4,11 @@ baseURL = "https://masoncomputers.com/"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true
-paginate = 10
 summaryLength = 0
 
+# Hugo 0.128+: paginate key replaced by [pagination].pagerSize
+[pagination]
+  pagerSize = 10
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
